@@ -1,4 +1,4 @@
-/home/minato/Documents/ASW/ProjHOG/HOGcpp/build/CMakeFiles/HOGcpp.dir
-/home/minato/Documents/ASW/ProjHOG/HOGcpp/build/CMakeFiles/detect.dir
+/home/minato/Documents/ASW/ProjHOG/HOGcpp/build/CMakeFiles/train_app.dir
+/home/minato/Documents/ASW/ProjHOG/HOGcpp/build/CMakeFiles/detect_app.dir
 /home/minato/Documents/ASW/ProjHOG/HOGcpp/build/CMakeFiles/edit_cache.dir
 /home/minato/Documents/ASW/ProjHOG/HOGcpp/build/CMakeFiles/rebuild_cache.dir

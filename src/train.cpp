@@ -163,7 +163,8 @@ int main() {
     cout << "Standardizing features..." << endl;
     // Standardize features
     StandardScaler scaler;
-    X = scaler.fit_transform(X);
+    scaler.fit(X);
+    X = scaler.transform(X);
 
     cout << "Training SVM classifier..." << endl;
     // Train an SVM classifier

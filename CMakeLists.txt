@@ -27,19 +27,19 @@ configure_file(
 )
 
 # Define the HOGcpp library (as an interface library since it's header-only)
-add_library(HOGcpp INTERFACE)
-target_include_directories(HOGcpp INTERFACE ${PROJECT_SOURCE_DIR}/include)
+add_library(HOGcpp_lib INTERFACE)
+target_include_directories(HOGcpp_lib INTERFACE ${PROJECT_SOURCE_DIR}/include)
 
 # Add executable targets
-add_executable(${PROJECT_NAME} src/train.cpp)
-add_executable(detect_screws src/detect_screws.cpp)
+add_executable(train_app src/train.cpp)
+add_executable(detect_app src/detect_screws.cpp)
 
 # Link OpenCV and LIBSVM libraries
-target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} /home/minato/Dev/libsvm-3.35/libsvm.so HOGcpp)
-target_link_libraries(detect_screws ${OpenCV_LIBS} /home/minato/Dev/libsvm-3.35/libsvm.so HOGcpp)
+target_link_libraries(train_app ${OpenCV_LIBS} /home/minato/Dev/libsvm-3.35/libsvm.so HOGcpp_lib)
+target_link_libraries(detect_app ${OpenCV_LIBS} /home/minato/Dev/libsvm-3.35/libsvm.so HOGcpp_lib)
 
 # Enable all compiler warnings
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra)
-    target_compile_options(detect_screws PRIVATE -Wall -Wextra)
+    target_compile_options(train_app PRIVATE -Wall -Wextra)
+    target_compile_options(detect_app PRIVATE -Wall -Wextra)
 endif()

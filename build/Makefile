@@ -117,54 +117,78 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HOGcpp
+# Target rules for targets named train_app
 
 # Build rule for target.
-HOGcpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HOGcpp
-.PHONY : HOGcpp
+train_app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 train_app
+.PHONY : train_app
 
 # fast build rule for target.
-HOGcpp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HOGcpp.dir/build.make CMakeFiles/HOGcpp.dir/build
-.PHONY : HOGcpp/fast
+train_app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_app.dir/build.make CMakeFiles/train_app.dir/build
+.PHONY : train_app/fast
 
 #=============================================================================
-# Target rules for targets named detect
+# Target rules for targets named detect_app
 
 # Build rule for target.
-detect: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 detect
-.PHONY : detect
+detect_app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 detect_app
+.PHONY : detect_app
 
 # fast build rule for target.
-detect/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/build
-.PHONY : detect/fast
+detect_app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_app.dir/build.make CMakeFiles/detect_app.dir/build
+.PHONY : detect_app/fast
 
-src/detect.o: src/detect.cpp.o
-.PHONY : src/detect.o
+src/detect_screws.o: src/detect_screws.cpp.o
+.PHONY : src/detect_screws.o
 
 # target to build an object file
-src/detect.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/detect.cpp.o
-.PHONY : src/detect.cpp.o
+src/detect_screws.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_app.dir/build.make CMakeFiles/detect_app.dir/src/detect_screws.cpp.o
+.PHONY : src/detect_screws.cpp.o
 
-src/detect.i: src/detect.cpp.i
-.PHONY : src/detect.i
+src/detect_screws.i: src/detect_screws.cpp.i
+.PHONY : src/detect_screws.i
 
 # target to preprocess a source file
-src/detect.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/detect.cpp.i
-.PHONY : src/detect.cpp.i
+src/detect_screws.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_app.dir/build.make CMakeFiles/detect_app.dir/src/detect_screws.cpp.i
+.PHONY : src/detect_screws.cpp.i
 
-src/detect.s: src/detect.cpp.s
-.PHONY : src/detect.s
+src/detect_screws.s: src/detect_screws.cpp.s
+.PHONY : src/detect_screws.s
 
 # target to generate assembly for a file
-src/detect.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect.dir/build.make CMakeFiles/detect.dir/src/detect.cpp.s
-.PHONY : src/detect.cpp.s
+src/detect_screws.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/detect_app.dir/build.make CMakeFiles/detect_app.dir/src/detect_screws.cpp.s
+.PHONY : src/detect_screws.cpp.s
+
+src/train.o: src/train.cpp.o
+.PHONY : src/train.o
+
+# target to build an object file
+src/train.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_app.dir/build.make CMakeFiles/train_app.dir/src/train.cpp.o
+.PHONY : src/train.cpp.o
+
+src/train.i: src/train.cpp.i
+.PHONY : src/train.i
+
+# target to preprocess a source file
+src/train.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_app.dir/build.make CMakeFiles/train_app.dir/src/train.cpp.i
+.PHONY : src/train.cpp.i
+
+src/train.s: src/train.cpp.s
+.PHONY : src/train.s
+
+# target to generate assembly for a file
+src/train.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train_app.dir/build.make CMakeFiles/train_app.dir/src/train.cpp.s
+.PHONY : src/train.cpp.s
 
 # Help Target
 help:
@@ -174,11 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... HOGcpp"
-	@echo "... detect"
-	@echo "... src/detect.o"
-	@echo "... src/detect.i"
-	@echo "... src/detect.s"
+	@echo "... detect_app"
+	@echo "... train_app"
+	@echo "... src/detect_screws.o"
+	@echo "... src/detect_screws.i"
+	@echo "... src/detect_screws.s"
+	@echo "... src/train.o"
+	@echo "... src/train.i"
+	@echo "... src/train.s"
 .PHONY : help
 
 

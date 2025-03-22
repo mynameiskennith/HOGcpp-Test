@@ -1,2 +1,2 @@
-# Empty dependencies file for detect.
+# Empty dependencies file for train_app.
 # This may be replaced when dependencies are built.

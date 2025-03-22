@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/minato/Documents/ASW/ProjHOG/HOGcpp/src/detect.cpp" "CMakeFiles/detect.dir/src/detect.cpp.o" "gcc" "CMakeFiles/detect.dir/src/detect.cpp.o.d"
+  "/home/minato/Documents/ASW/ProjHOG/HOGcpp/src/detect_screws.cpp" "CMakeFiles/detect_app.dir/src/detect_screws.cpp.o" "gcc" "CMakeFiles/detect_app.dir/src/detect_screws.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
